@@ -1,28 +1,42 @@
 # Open Context Article Reader
 
-一个独立的 Agent Skill，用于理解**单篇博文或网络文章**。它帮助读者看清文章讨论的问题、作者的观点或做法、论证依据、关键概念和适用边界；支持技术、商业、哲学等领域。
+Language: **English** · [简体中文](README.zh-CN.md)
 
-## 使用方式
+**Understand one article, including what its evidence can and cannot support.**
 
-将本仓库目录作为 `open-context-article-reader` Skill 加入所用 Agent 的技能搜索路径，然后提供文章 URL、正文、Markdown 或可读取的本地文本文件。例如：
+Open Context Article Reader is an instruction-only Agent Skill for reading a single blog post or web article. It helps you identify the author's question and central takeaway, explain a few essential ideas in plain language, and separate the article's claims from your own inferences and open questions. It works across technical, business, philosophical, and mixed-topic writing.
 
-> 用 open-context-article-reader 帮我理解这篇文章：作者在解决什么问题？核心观点依据是什么？哪些背景和局限需要进一步核对？<文章 URL>
+## Use the Skill
 
-也可以要求“先给我三分钟的概要”“按概念学习方式讲解”或“重点检查论证”。Skill 会根据文章的功能和用户目标调整输出，不要求用户选择固定模式。
+Make this repository available as `open-context-article-reader` in your agent's Skill search path. Keep `SKILL.md` and `references/` together. Then provide one article URL, pasted text, Markdown/MDX, or a readable local text file.
 
-## 阅读范围
+For a quick, article-only reading, use this prompt after the Skill appears in your agent's Skill list:
 
-- 分析单篇文章的主题、问题、观点、结构、证据、概念与局限。
-- 对关键缺失背景和时效性事实进行有针对性的外部核对，并区分原文、推断和外部资料。
-- 正文无法获取时说明限制；不会仅凭标题或搜索摘要补写内容。
+> Use $open-context-article-reader to read this article: 〈article URL or local file path〉. Give me its central takeaway in one sentence, then explain 3–5 essential points in plain language. For each point, say what it means here and which step, mechanism, or example in the article makes it concrete. Cite the relevant section. Briefly distinguish the author's claims, your inferences, and what remains unverified. Keep it concise and use only this article.
 
-本项目暂不处理整本书、完整学术论文、批量订阅、长期知识库写入或文章发布。它不依赖 Open Context Forge 的 vault。
+To focus on a particular idea, add:
 
-## 项目文件
+> Focus on 〈term or question〉 if it appears in this article. If it does not, say so briefly and choose the article's own core points; do not carry over terms from a previous article.
 
-- [`SKILL.md`](SKILL.md)：Skill 触发条件、阅读流程和输出约束。
-- [`references/methodology.md`](references/methodology.md)：按文章功能选择分析方法。
-- [`docs/design.md`](docs/design.md)：需求与设计基线。
-- [`docs/HANDOFF.md`](docs/HANDOFF.md)：当前状态和后续工作。
+If the Skill has not been added to the search path, ask your agent to read and follow this repository's `SKILL.md` by path. That uses the file as instructions but does not register the Skill for `$` invocation.
 
-目前仅有说明型 Skill，无运行时依赖或抓取服务。仓库保持私有；公开与许可证将在以后确定。
+## Reading boundaries
+
+- The Skill reads the article body before summarizing it. If the body or an important embedded element cannot be accessed, it states the limit rather than filling in missing details.
+- A conclusion is a candidate for the central takeaway, checked against the rest of the article. Examples, author-reported results, outside findings, and independent verification remain distinct.
+- External research addresses a specific gap when needed. You can request an article-only reading as in the prompt above.
+- Full books, full academic papers, batch feeds, automatic knowledge-base writes, and article publishing are outside this Skill's scope. It does not depend on the Open Context Forge vault.
+
+## Project files
+
+- [`SKILL.md`](SKILL.md) — invocation boundary, reading workflow, and evidence rules.
+- [`references/methodology.md`](references/methodology.md) — questions for different article types, read only when useful.
+- [`docs/design.md`](docs/design.md) — design baseline.
+- [`docs/phase-1-validation.md`](docs/phase-1-validation.md) — sample reading cases and their limits.
+- [`docs/HANDOFF.md`](docs/HANDOFF.md) — current state and open work.
+
+This Skill has no runtime service or scripts.
+
+## License
+
+[MIT](LICENSE) © 2026 Shoukai Huang. The linked articles and other third-party sources remain under their respective owners' terms; their full text is not included in this repository.

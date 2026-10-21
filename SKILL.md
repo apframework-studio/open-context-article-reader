@@ -18,9 +18,9 @@ Help the reader form an accurate, useful understanding of **one article**. Recon
 ## Reading workflow
 
 1. **Place the article.** Identify its domain, primary function (for example: argument, tutorial, experience report, product explanation, commentary, or collection), and any meaningful information limits. Mixed functions are normal. Use these judgments to select the analysis, not as a score.
-2. **Reconstruct its question and answer.** State the problem or subject the article addresses, why it matters in the author's framing, and its main position or practical result. A tutorial may offer a procedure rather than a thesis; a reflective essay may leave its conclusion open.
+2. **Reconstruct its question and answer.** State the problem or subject the article addresses, why it matters in the author's framing, and its main position or practical result. When the article has an explicit takeaway or concluding sentence, use it as a candidate center and check it against the body; distinguish a closing forecast about one subtopic from the article's overall answer. Otherwise give a clearly marked paraphrase without inventing a thesis. A tutorial may offer a procedure rather than a thesis; a reflective essay may leave its conclusion open.
 3. **Map the reasoning.** Explain how major sections advance the article. For arguments, inspect claims, support, the bridge from evidence to claim, assumptions, qualifications, and plausible counterexamples. For tutorials, inspect prerequisites, mechanism, sequence, observed result, and reproducibility. For reports or product pieces, inspect context, evidence, incentives, tradeoffs, and alternatives. For consequential claims, ask what kind of conclusion is being drawn and whether the material supports that strength of conclusion. Read [methodology](references/methodology.md) when selecting a lens is difficult or the article mixes functions.
-4. **Build a small concept bridge.** Explain only the concepts needed to understand the central argument or procedure, show their relationships, and identify missing prerequisites. If useful for learning, add one or two self-explanation or application questions.
+4. **Unpack the core points.** If the main answer names several ideas, return to the body and explain only the essential ones in plain language: what each means here and what concrete step, mechanism, or example gives it substance. Do not merely repeat the article's slogans or turn the explanation into a long inventory. If requested focus terms are absent from this article and no comparison was requested, say so briefly and choose the article's own core points. Explain any prerequisite concepts needed to connect the points; if useful for learning, add one or two self-explanation or application questions.
 5. **Check consequential gaps.** Research external background only when it affects comprehension or the credibility of an important claim, such as a cited study, time-sensitive fact, technical version, disputed premise, or missing definition. Form a specific question first; prefer original or authoritative sources. If research is unavailable or the user asks for a text-only reading, mark the gap instead of filling it from memory.
 6. **Synthesize with limits.** Say what the article supports, what remains uncertain, and under what conditions its advice or conclusion might transfer. Critique specific evidence or assumptions; avoid a generic quality score.
 
@@ -32,8 +32,8 @@ For each consequential conclusion, place its source category nearby: **article s
 
 Use headings only where they help. A typical response covers:
 
-- **What this article is about:** source and reading limits, domain/function, central question, and main position or result.
-- **How it works or argues:** a compact structure/claim map with the decisive evidence, steps, or assumptions.
+- **What this article is about:** source and reading limits, domain/function, central question, and a concise central takeaway when the article supports one.
+- **How it works or argues:** a few core points, each briefly explained with its concrete role in the article, plus the decisive evidence, steps, or assumptions.
 - **Concepts worth learning:** a few connected ideas, not a glossary of every term.
 - **What to trust or check next:** supported points, open questions, applicable counterviews, and targeted research if performed.
 
