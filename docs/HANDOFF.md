@@ -6,7 +6,7 @@
 
 ## 当前状态
 
-- GitHub 仓库在本次初始化前为空，仍保持 `PRIVATE`。本地从远端克隆，首次提交 `df340bc` 已推送至 `main`，远端默认分支已核实为 `main`。
+- GitHub 仓库在初始化前为空；首次提交 `df340bc` 已推送至 `main`。截至 2026-10-21，仓库为 `PUBLIC`，默认分支仍为 `main`。
 - 已通过 `codex app` 打开本地目录，并通过应用项目列表核实：`open-context-article-reader` 已注册为独立本地 Git 项目，可切换到该项目继续工作。
 - 根目录 `SKILL.md` 是可独立使用的 Skill；`references/methodology.md` 收纳不同文章功能的分析视角。没有运行时服务、脚本或 vault 依赖。
 - 第一阶段针对 `harness2` README 和本地 `essay/` 原始文章的领域问题、选样与人工试读见 `docs/phase-1-validation.md`。目录只作只读样本来源，没有纳入本仓库依赖或复制第三方正文。
@@ -39,15 +39,16 @@
 - README 双语整理后核对了两个文件中的 12 个相对 Markdown 链接，目标均存在；`git diff --check` 通过。该次整理只改文档，没有改动 Skill 阅读行为。
 - 这些是少量人工试读，不是自动化质量基准。跨语种内容与更多真实低质量博文仍需后续检验。
 
-## 公开准备检查（2026-10-21）
+## 公开与仓库资料检查（2026-10-21）
 
 - 仓库自身内容采用与 `open-context-clipper` 逐字一致的 MIT `LICENSE`，版权行为 `Copyright (c) 2026 Shoukai Huang`；中英文 README 已链接协议。外部文章与论文仍归各自权利人，本仓库只保留链接、少量短语和自行撰写的分析，没有第三方文章全文。
 - 核对本次提交前全部 3 个现有提交的文件名与内容：没有文章原文文件、`.env`、私钥或常见凭据特征；当时已跟踪文件都是 Markdown 与 `.gitignore`。旧版 `docs/HANDOFF.md` 在历史提交中包含本机用户目录路径，当前版本已移除；路径本身未包含凭据，但公开 Git 历史时仍可见，不为此重写历史。
 - 当前 9 个 Markdown 文件中的 15 个相对链接均有本地目标；`LICENSE` 与 Clipper 的文件比较一致；Skill Creator `quick_validate.py .` 返回 `Skill is valid!`；`git diff --check` 通过。`.DS_Store` 由 `.gitignore` 排除，未纳入 Git。
-- GitHub 仓库目前仍为 `PRIVATE`，默认分支为 `main`，描述与 topics 为空。公开时可使用描述 `An Agent Skill for understanding one web article, its core ideas, and evidence limits.`，topics 可设为 `agent-skills`、`article-reading`、`reading-comprehension`；远端可见性尚未变更。
+- 上轮检查时 GitHub 仓库为 `PRIVATE`；本轮开始时再次通过 GitHub API 查询，已是 `PUBLIC`。本轮只优化资料：描述设为 `Agent Skill for understanding one web article: central idea, key concepts, and evidence limits`，topics 为 `agent-skills`、`article-reading`、`reading-comprehension`。复查确认 GitHub 识别 MIT、默认分支为 `main`；Issues 开启，Wiki 与 Discussions 关闭，这三项与同组织 `open-context-clipper` 一致。没有网站地址，因此 homepage 保持为空；本轮没有更改仓库可见性。
+- 本轮本地只更新协作规则和状态文档，`git diff --check` 通过；`SKILL.md` 与阅读行为未改。旧提交中的本机路径仍可见于公开历史，已在上文记录。
 
 ## 后续工作
 
 - 用固定输入多次独立运行 Skill，并由人盲评主张归属、证据强度和遗漏，判断本轮规则在不同文章与模型上是否稳定；继续扩大到未试读的本地文章和真实低信息质量博文。
 - 若需要跨 Agent 产品发布，核对对应产品的 Skill 安装方式及元数据要求；`agents/openai.yaml` 仅在有实际界面需求时添加。
-- 新增示例文章时继续控制短摘录范围；可按需要补充仓库描述与 topics。仓库可见性保持私有，除非用户明确要求变更。
+- 新增示例文章时继续控制短摘录范围；仓库可见性的后续变更需要用户明确要求。
